@@ -1,17 +1,8 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+User Dashboard
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
+<form action="{{ route('logout') }}" method="POST">
+    @csrf
+    <div class="auth-btn">
+        <button type="submit" class="theme-btn"><span class="far fa-sign-out"></span> Logout</button>
     </div>
-</x-app-layout>
+</form>
