@@ -84,7 +84,7 @@
                         <div class="footer-widget-box">
                             <h4 class="footer-widget-title">Get In Touch</h4>
                             <ul class="footer-contact">
-                                <li>
+                                {{-- <li>
                                     <div class="icon">
                                         <i class="far fa-location-dot"></i>
                                     </div>
@@ -92,14 +92,14 @@
                                         <h6>Our Address</h6>
                                         <p>25/AB Milford Road, New York, USA</p>
                                     </div>
-                                </li>
+                                </li> --}}
                                 <li>
                                     <div class="icon">
                                         <i class="far fa-phone"></i>
                                     </div>
                                     <div class="content">
                                         <h6>Call Us</h6>
-                                        <a href="tel:+21236547898">+92 302 1233432</a>
+                                        <a href="tel:+{{ env('APP_PHONE') }}">{{ env('APP_PHONE') }}</a>
                                     </div>
                                 </li>
                                 <li>
@@ -108,7 +108,7 @@
                                     </div>
                                     <div class="content">
                                         <h6>Mail Us</h6>
-                                        <a href="mailto:info@example.com">info@RanaUzaibAhmad.com</a>
+                                        <a href="mailto:{{ env('APP_EMAIL') }}">{{ env('APP_EMAIL') }}</a>
                                     </div>
                                 </li>
                             </ul>
@@ -123,7 +123,8 @@
             <div class="row">
                 <div class="col-md-6 align-self-center">
                     <p class="copyright-text">
-                        &copy; Copyright <span id="date"></span> <a href="#"> Visarx </a> All Rights
+                        &copy; Copyright <span id="date"></span> <a href="#"> {{ env('APP_NAME') }} </a> All
+                        Rights
                         Reserved.
                     </p>
                 </div>

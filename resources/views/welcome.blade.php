@@ -12,14 +12,14 @@
                                     <i class="far fa-passport"></i> Best Legal Support!
                                 </h6>
                                 <h1 class="hero-title" data-animation="fadeInRight" data-delay=".50s">
-                                    Let's plan <span>awesome trip of</span> your dream...
+                                    Make Plan for your <span>Dream Destination</span>
                                 </h1>
                                 <p data-animation="fadeInLeft" data-delay=".75s">
                                     There are many variations of passages orem psum available but the majority have
                                     suffered alteration in some form by injected humour.
                                 </p>
                                 <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
-                                    <a href="contact.html" class="theme-btn2">Make your Profile<i
+                                    <a href="#" class="theme-btn2">Find University<i
                                             class="fas fa-circle-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@
                     <div class="apply-form">
                         <form action="#">
                             <div class="apply-header">
-                                <h4 class="title">Destination To Fly</h4>
+                                <h4 class="title">Need Assessment</h4>
                                 <button type="submit" class="theme-btn">Apply Now<i
                                         class="fas fa-arrow-circle-right"></i></button>
                             </div>
@@ -168,8 +168,7 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="about-experience">
-                                            <h5>30<span>+</span></h5>
-                                            <p>Years Of Experience</p>
+                                            <p style="font-size: 20px;margin-top:30px;">Years Of Experience</p>
                                         </div>
                                         <img class="img-2" src="{{ asset('assets/img/video/8.jpg') }}" alt="">
                                     </div>
@@ -181,7 +180,8 @@
                         <div class="about-right wow fadeInUp" data-wow-delay=".25s">
                             <div class="site-heading mb-3">
                                 <span class="site-title-tagline"><i class="far fa-passport"></i> About Us</span>
-                                <h2 class="site-title">We Are Trusted <span>Visa And Immigration</span> Agency</h2>
+                                <h2 class="site-title">We're Trusted Partners of <span>World Top Ranked</span> Universities
+                                </h2>
                             </div>
                             <p class="about-text">There are many variations of passages available
                                 but the majority have suffered alteration in some form by injected humour
@@ -227,7 +227,7 @@
         <div class="video-area">
             <div class="container-fluid px-0">
                 <div class="video-info">
-                    <div class="video-content" style="background-image: url({{ asset('assets/img/video/5.jpg') }});">
+                    <div class="video-content" style="background-image: url({{ asset('assets/img/video/6.jpg') }});">
                         <a class="play-btn popup-youtube" href="#">
                             <i class="fas fa-play"></i>
                         </a>
@@ -499,7 +499,7 @@
                         <div class="wow fadeInUp" data-wow-delay=".25s">
                             <div class="site-heading mb-0">
                                 <span class="site-title-tagline"><i class="far fa-passport"></i> Why Choose Us</span>
-                                <h2 class="site-title">Trusted And <span>Experience Visa</span> Service Provider</h2>
+                                <h2 class="site-title">Trusted And <span>Experience </span> Service Provider</h2>
                                 <p>
                                     It is a long established fact that a reader will be distracted by the readable
                                     content of a page when will uncover many web sites still in their majority have

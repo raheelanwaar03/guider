@@ -134,6 +134,11 @@
                                     </ul>
                                 </li> --}}
                                 <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                                <li class="nav-item d-sm-none ">
+                                    <a href="{{ route('login') }}" class="btn btn-warning text-white">Login</a>
+                                    <a href="{{ route('register') }}" class="btn text-white"
+                                        style="background-color:#1d397e;">Register</a>
+                                </li>
                             </ul>
                             <!-- nav-right -->
                             <div class="nav-right">
@@ -162,7 +167,8 @@
         <button class="close-search"><span class="far fa-times"></span></button>
         <form action="#">
             <div class="form-group">
-                <input type="search" name="search-field" class="form-control" placeholder="Search Here..." required>
+                <input type="search" name="search-field" class="form-control" placeholder="Search Here..."
+                    required>
                 <button type="submit"><i class="far fa-search"></i></button>
             </div>
         </form>

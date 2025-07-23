@@ -8,7 +8,7 @@
                     <div class="auth-form">
                         <div class="auth-header">
                             <img src="assets/img/logo/logo.png" alt="">
-                            <p>Login with your Guider account</p>
+                            <p>Login with your {{ env('APP_NAME') }} account</p>
                         </div>
                         <form action="{{ route('login') }}" method="POST">
                             @csrf

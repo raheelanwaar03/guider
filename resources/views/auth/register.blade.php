@@ -9,7 +9,7 @@
                     <div class="auth-form">
                         <div class="auth-header">
                             <img src="assets/img/logo/logo.png" alt="">
-                            <p>Create your free visarx account</p>
+                            <p>Create your free {{ env('APP_NAME') }} account</p>
                         </div>
                         <form action="{{ route('register') }}" method="POST">
                             @csrf
