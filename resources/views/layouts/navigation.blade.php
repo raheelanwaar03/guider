@@ -72,10 +72,12 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link active" href="{{ route('home') }}">Home</a>
+                                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}"
+                                        href="{{ route('home') }}">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link" href="{{ route('coaching') }}">Coaching</a>
+                                    <a class="nav-link {{ request()->is('Coaching') ? 'active' : '' }}"
+                                        href="{{ route('coaching') }}">Coaching</a>
                                 </li>
                                 {{-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#"
@@ -120,10 +122,12 @@
                                     </ul>
                                 </li> --}}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('visa') }}">Visa</a>
+                                    <a class="nav-link {{ request()->is('Visa') ? 'active' : '' }}"
+                                        href="{{ route('visa') }}">Visa</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('country') }}">Countries</a>
+                                    <a class="nav-link {{ request()->is('Country') ? 'active' : '' }}"
+                                        href="{{ route('country') }}">Countries</a>
                                 </li>
                                 {{-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#"
@@ -133,7 +137,7 @@
                                         <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
                                     </ul>
                                 </li> --}}
-                                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link {{ request()->is('Contact') ? 'active' : ''}}" href="{{ route('contact') }}">Contact</a></li>
                                 <li class="nav-item d-sm-none ">
                                     <a href="{{ route('login') }}" class="btn btn-warning text-white">Login</a>
                                     <a href="{{ route('register') }}" class="btn text-white"
