@@ -35,81 +35,39 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-2">
+                    <div class="col-4">
+                        <div class="footer-widget-box list">
+                            <h4 class="footer-widget-title">Services for Students</h4>
+                            <ul class="footer-list">
+                                <li><a href="#"><i class="far fa-angle-double-right"></i>Counselling</a>
+                                </li>
+                                <li><a href="#"><i class="far fa-angle-double-right"></i>Test Preparation</a>
+                                </li>
+                                <li><a href="#"><i class="far fa-angle-double-right"></i>Course, Country &
+                                        University Selection</a>
+                                </li>
+                                <li><a href="#"><i class="far fa-angle-double-right"></i>Applications &
+                                        Admission</a>
+                                </li>
+                                <li><a href="#"><i class="far fa-angle-double-right"></i>Scholarships</a></li>
+                                <li><a href="#"><i class="far fa-angle-double-right"></i>Internship</a></li>
+                                <li><a href="#"><i class="far fa-angle-double-right"></i>Education Loan</a></li>
+                                <li><a href="#"><i class="far fa-angle-double-right"></i>Visa Processing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3">
                         <div class="footer-widget-box list">
                             <h4 class="footer-widget-title">Company</h4>
                             <ul class="footer-list">
                                 <li><a href="#"><i class="far fa-angle-double-right"></i>About Us</a>
                                 </li>
-                                <li><a href="#"><i class="far fa-angle-double-right"></i>Update News</a>
+                                <li><a href="#"><i class="far fa-angle-double-right"></i>Career</a>
                                 </li>
-                                <li><a href="#"><i class="far fa-angle-double-right"></i>Testimonials</a>
+                                <li><a href="#"><i class="far fa-angle-double-right"></i>News & Events</a>
                                 </li>
-                                <li><a href="#"><i class="far fa-angle-double-right"></i>Contact
-                                        Us</a>
-                                </li>
-                                <li><a href="#"><i class="far fa-angle-double-right"></i>Terms Of
-                                        Service</a></li>
-                                <li><a href="#"><i class="far fa-angle-double-right"></i>Privacy
-                                        policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-2">
-                        <div class="footer-widget-box list">
-                            <h4 class="footer-widget-title">Visa Type</h4>
-                            <ul class="footer-list">
-                                <li><a href="#"><i class="far fa-angle-double-right"></i>Student
-                                        Visa</a>
-                                </li>
-                                <li><a href="#"><i class="far fa-angle-double-right"></i>Tourist
-                                        Visa</a>
-                                </li>
-                                <li><a href="#"><i class="far fa-angle-double-right"></i>Commercial
-                                        Visa</a>
-                                </li>
-                                <li><a href="#"><i class="far fa-angle-double-right"></i>Residence
-                                        Visa</a>
-                                </li>
-                                <li><a href="#"><i class="far fa-angle-double-right"></i>Working
-                                        Visa</a>
-                                </li>
-                                <li><a href="#"><i class="far fa-angle-double-right"></i>Migrate
-                                        Visa</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="footer-widget-box">
-                            <h4 class="footer-widget-title">Get In Touch</h4>
-                            <ul class="footer-contact">
-                                {{-- <li>
-                                    <div class="icon">
-                                        <i class="far fa-location-dot"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h6>Our Address</h6>
-                                        <p>25/AB Milford Road, New York, USA</p>
-                                    </div>
-                                </li> --}}
-                                <li>
-                                    <div class="icon">
-                                        <i class="far fa-phone"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h6>Call Us</h6>
-                                        <a href="tel:+{{ env('APP_PHONE') }}">{{ env('APP_PHONE') }}</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="far fa-envelope"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h6>Mail Us</h6>
-                                        <a href="mailto:{{ env('APP_EMAIL') }}">{{ env('APP_EMAIL') }}</a>
-                                    </div>
+                                <li><a href="#"><i class="far fa-angle-double-right"></i>Corporate Social
+                                        Responsibility</a>
                                 </li>
                             </ul>
                         </div>
