@@ -72,10 +72,10 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link active" href="{{ url('/') }}">Home</a>
+                                    <a class="nav-link active" href="{{ route('home') }}">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">Coaching</a>
+                                    <a class="nav-link" href="{{ route('coaching') }}">Coaching</a>
                                 </li>
                                 {{-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#"
@@ -120,10 +120,10 @@
                                     </ul>
                                 </li> --}}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Visa</a>
+                                    <a class="nav-link" href="{{ route('visa') }}">Visa</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Countries</a>
+                                    <a class="nav-link" href="{{ route('country') }}">Countries</a>
                                 </li>
                                 {{-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#"
@@ -133,7 +133,7 @@
                                         <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
                                     </ul>
                                 </li> --}}
-                                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                                 <li class="nav-item d-sm-none ">
                                     <a href="{{ route('login') }}" class="btn btn-warning text-white">Login</a>
                                     <a href="{{ route('register') }}" class="btn text-white"
@@ -142,10 +142,10 @@
                             </ul>
                             <!-- nav-right -->
                             <div class="nav-right">
-                                <div class="search-btn">
+                                {{-- <div class="search-btn">
                                     <button type="button" class="nav-right-link search-box-outer"><i
                                             class="far fa-search"></i></button>
-                                </div>
+                                </div> --}}
                                 <div class="nav-btn">
                                     <a href="{{ route('login') }}" class="theme-btn">Sign In<i
                                             class="fas fa-circle-arrow-right"></i></a>
@@ -167,8 +167,7 @@
         <button class="close-search"><span class="far fa-times"></span></button>
         <form action="#">
             <div class="form-group">
-                <input type="search" name="search-field" class="form-control" placeholder="Search Here..."
-                    required>
+                <input type="search" name="search-field" class="form-control" placeholder="Search Here..." required>
                 <button type="submit"><i class="far fa-search"></i></button>
             </div>
         </form>
