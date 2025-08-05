@@ -28,6 +28,8 @@
 
 <body class="home-3">
 
+    <x-alert />
+
     <!-- preloader -->
     <div class="preloader">
         <div class="loader-ripple">
@@ -137,7 +139,8 @@
                                         <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
                                     </ul>
                                 </li> --}}
-                                <li class="nav-item"><a class="nav-link {{ request()->is('Contact') ? 'active' : ''}}" href="{{ route('contact') }}">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link {{ request()->is('Contact') ? 'active' : '' }}"
+                                        href="{{ route('contact') }}">Contact</a></li>
                                 <li class="nav-item d-sm-none ">
                                     <a href="{{ route('login') }}" class="btn btn-warning text-white">Login</a>
                                     <a href="{{ route('register') }}" class="btn text-white"
