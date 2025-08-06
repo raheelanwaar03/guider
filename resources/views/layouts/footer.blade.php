@@ -35,7 +35,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <div class="footer-widget-box list">
                             <h4 class="footer-widget-title">Services for Students</h4>
                             <ul class="footer-list">
@@ -56,7 +56,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-sm-3">
                         <div class="footer-widget-box list">
                             <h4 class="footer-widget-title">Company</h4>
                             <ul class="footer-list">
