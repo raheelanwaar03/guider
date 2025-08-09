@@ -56,7 +56,6 @@ class clean extends Command
         $user->role = 'branch';
         $user->save();
 
-
         $this->info('Application cleaned and optimized successfully!');
     }
 }
