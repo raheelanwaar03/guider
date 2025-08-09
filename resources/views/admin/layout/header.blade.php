@@ -19,11 +19,10 @@
 
 </head>
 
-
-<!-- Top Bar Start -->
-
 <body>
-    <!-- Top Bar Start -->
+
+    <x-alert />
+
     <div class="topbar d-print-none">
         <div class="container-xxl">
             <nav class="topbar-custom d-flex justify-content-between" id="topbar-custom">
@@ -36,8 +35,7 @@
                         </button>
                     </li>
                     <li class="mx-3 welcome-text">
-                        <h3 class="mb-0 fw-bold text-truncate">Good Morning, James!</h3>
-                        <!-- <h6 class="mb-0 fw-normal text-muted text-truncate fs-14">Here's your overview this week.</h6> -->
+                        <h3 class="mb-0 fw-bold text-truncate">Greetings, SuperAdmin!</h3>
                     </li>
                 </ul>
                 <ul class="topbar-item list-unstyled d-inline-flex align-items-center mb-0">
@@ -48,27 +46,6 @@
                             <button type="submit"><i class="iconoir-search"></i></button>
                         </form>
                     </li>
-                    <li class="dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="{{ asset('admin/assets/images/flags/us_flag.jpg') }}" alt=""
-                                class="thumb-sm rounded-circle">
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#"><img
-                                    src="{{ asset('admin/assets/images/flags/us_flag.jpg') }}" alt=""
-                                    height="15" class="me-2">English</a>
-                            <a class="dropdown-item" href="#"><img
-                                    src="{{ asset('admin/assets/images/flags/spain_flag.jpg') }}" alt=""
-                                    height="15" class="me-2">Spanish</a>
-                            <a class="dropdown-item" href="#"><img
-                                    src="{{ asset('admin/assets/images/flags/germany_flag.jpg') }}" alt=""
-                                    height="15" class="me-2">German</a>
-                            <a class="dropdown-item" href="#"><img
-                                    src="{{ asset('admin/assets/images/flags/french_flag.jpg') }}" alt=""
-                                    height="15" class="me-2">French</a>
-                        </div>
-                    </li><!--end topbar-language-->
 
                     <li class="topbar-item">
                         <a class="nav-link nav-icon" href="javascript:void(0);" id="light-dark-mode">
@@ -80,211 +57,6 @@
                     <li class="dropdown topbar-item">
                         <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false">
-                            <i class="icofont-bell-alt"></i>
-                            <span class="alert-badge"></span>
-                        </a>
-                        <div class="dropdown-menu stop dropdown-menu-end dropdown-lg py-0">
-
-                            <h5 class="dropdown-item-text m-0 py-3 d-flex justify-content-between align-items-center">
-                                Notifications <a href="#" class="badge text-body-tertiary badge-pill">
-                                    <i class="iconoir-plus-circle fs-4"></i>
-                                </a>
-                            </h5>
-                            <ul class="nav nav-tabs nav-tabs-custom nav-success nav-justified mb-1" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link mx-0 active" data-bs-toggle="tab" href="#All"
-                                        role="tab" aria-selected="true">
-                                        All <span
-                                            class="badge bg-primary-subtle text-primary badge-pill ms-1">24</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link mx-0" data-bs-toggle="tab" href="#Projects" role="tab"
-                                        aria-selected="false" tabindex="-1">
-                                        Projects
-                                    </a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link mx-0" data-bs-toggle="tab" href="#Teams" role="tab"
-                                        aria-selected="false" tabindex="-1">
-                                        Team
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="ms-0" style="max-height:230px;" data-simplebar>
-                                <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="All" role="tabpanel"
-                                        aria-labelledby="all-tab" tabindex="0">
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">2 min ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-wolf fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">Your order is placed
-                                                    </h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing and
-                                                        industry.</small>
-                                                </div><!--end media-body-->
-                                            </div><!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">10 min ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-apple-swift fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">Meeting with designers
-                                                    </h6>
-                                                    <small class="text-muted mb-0">It is a long established fact that a
-                                                        reader.</small>
-                                                </div><!--end media-body-->
-                                            </div><!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">40 min ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-birthday-cake fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">UX 3 Task complete.</h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                                </div><!--end media-body-->
-                                            </div><!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">1 hr ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-drone fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">Your order is placed
-                                                    </h6>
-                                                    <small class="text-muted mb-0">It is a long established fact that a
-                                                        reader.</small>
-                                                </div><!--end media-body-->
-                                            </div><!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">2 hrs ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-user fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">Payment Successfull</h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                                </div><!--end media-body-->
-                                            </div><!--end media-->
-                                        </a><!--end-item-->
-                                    </div>
-                                    <div class="tab-pane fade" id="Projects" role="tabpanel"
-                                        aria-labelledby="projects-tab" tabindex="0">
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">40 min ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-birthday-cake fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">UX 3 Task complete.</h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                                </div><!--end media-body-->
-                                            </div><!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">1 hr ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-drone fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">Your order is placed
-                                                    </h6>
-                                                    <small class="text-muted mb-0">It is a long established fact that a
-                                                        reader.</small>
-                                                </div><!--end media-body-->
-                                            </div><!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">2 hrs ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-user fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">Payment Successfull</h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                                </div><!--end media-body-->
-                                            </div><!--end media-->
-                                        </a><!--end-item-->
-                                    </div>
-                                    <div class="tab-pane fade" id="Teams" role="tabpanel"
-                                        aria-labelledby="teams-tab" tabindex="0">
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">1 hr ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-drone fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">Your order is placed
-                                                    </h6>
-                                                    <small class="text-muted mb-0">It is a long established fact that a
-                                                        reader.</small>
-                                                </div><!--end media-body-->
-                                            </div><!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">2 hrs ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-user fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">Payment Successfull</h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                                </div><!--end media-body-->
-                                            </div><!--end media-->
-                                        </a><!--end-item-->
-                                    </div>
-                                </div>
-
-                            </div>
-                            <!-- All-->
-                            <a href="pages-notifications.html" class="dropdown-item text-center text-dark fs-13 py-2">
-                                View All <i class="fi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class="dropdown topbar-item">
-                        <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown"
-                            href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <img src="{{ asset('admin/assets/images/users/avatar-1.jpg') }}" alt=""
                                 class="thumb-lg rounded-circle">
                         </a>
@@ -354,21 +126,10 @@
                             <span>Main Menu</span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarDashboards">
+                            <a class="nav-link" href="{{ route('Admin.Dashboard') }}">
                                 <i class="iconoir-home-simple menu-icon"></i>
                                 <span>Dashboards</span>
                             </a>
-                            <div class="collapse " id="sidebarDashboards">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html">Analytics</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ecommerce-index.html">Ecommerce</a>
-                                    </li><!--end nav-item-->
-                                </ul><!--end nav-->
-                            </div><!--end startbarDashboards-->
                         </li><!--end nav-item-->
                         <li class="nav-item">
                             <a class="nav-link" href="#sidebarApplications" data-bs-toggle="collapse" role="button"
@@ -811,16 +572,6 @@
                             </div><!--end startbarAuthentication-->
                         </li><!--end nav-item-->
                     </ul><!--end navbar-nav--->
-                    <div class="update-msg text-center">
-                        <div
-                            class="d-flex justify-content-center align-items-center thumb-lg update-icon-box  rounded-circle mx-auto">
-                            <i class="iconoir-peace-hand h3 align-self-center mb-0 text-primary"></i>
-                        </div>
-                        <h5 class="mt-3">Mannat Themes</h5>
-                        <p class="mb-3 text-muted">Rizz is a high quality web applications.</p>
-                        <a href="javascript: void(0);" class="btn text-primary shadow-sm rounded-pill">Upgrade your
-                            plan</a>
-                    </div>
                 </div>
             </div><!--end startbar-collapse-->
         </div><!--end startbar-menu-->

@@ -52,6 +52,7 @@ class clean extends Command
         $user = new User();
         $user->name = 'Branch';
         $user->email = 'branch@gmail.com';
+        $user->location = 'Test Location';
         $user->password = Hash::make('asdfasdf');
         $user->role = 'branch';
         $user->save();

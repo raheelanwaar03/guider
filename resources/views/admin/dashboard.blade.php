@@ -10,11 +10,11 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h4 class="card-title">Customers</h4>
+                                        <h4 class="card-title">Branches</h4>
                                     </div><!--end col-->
                                     <div class="col-auto">
                                         <form class="row g-2">
-                                            <div class="col-auto">
+                                            {{-- <div class="col-auto">
                                                 <a class="btn bg-primary-subtle text-primary dropdown-toggle d-flex align-items-center arrow-none"
                                                     data-bs-toggle="dropdown" href="#" role="button"
                                                     aria-haspopup="false" aria-expanded="false"
@@ -74,12 +74,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div><!--end col-->
+                                            </div> --}}
 
                                             <div class="col-auto">
                                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                    data-bs-target="#addBoard"><i class="fa-solid fa-plus me-1"></i> Add
-                                                    Product</button>
+                                                    data-bs-target="#exampleModalLarge"><i
+                                                        class="fa-solid fa-plus me-1"></i>Add
+                                                    Branch</button>
                                             </div><!--end col-->
                                         </form>
                                     </div><!--end col-->
@@ -91,362 +92,32 @@
                                     <table class="table mb-0 checkbox-all" id="datatable_1">
                                         <thead class="table-light">
                                             <tr>
-                                                <th style="width: 16px;">
-                                                    <div class="form-check mb-0">
-                                                        <input type="checkbox" class="form-check-input" name="select-all"
-                                                            id="select-all">
-                                                    </div>
-                                                </th>
-                                                <th class="ps-0">Customer</th>
+                                                <th>No</th>
+                                                <th>Name</th>
                                                 <th>Email</th>
+                                                <th>Location</th>
                                                 <th>Status</th>
-                                                <th>Order</th>
-                                                <th>Spent</th>
+                                                <th>Role</th>
                                                 <th class="text-end">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck1">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-2.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">Andy Timmons</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">dummy@dummy.com</a>
-                                                </td>
-                                                <td><span class="badge bg-danger-subtle text-danger">VIP</span></td>
-                                                <td>75</td>
-                                                <td>$280</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck2">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-3.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">Jeff Beck</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">fake@dummy.com</a>
-                                                </td>
-                                                <td><span class="badge bg-success-subtle text-success">Loyal</span></td>
-                                                <td>65</td>
-                                                <td>$150</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck3">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-4.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">Vince Nelson</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">exemple@dummy.com</a>
-                                                </td>
-                                                <td><span class="badge bg-success-subtle text-success">Referral</span></td>
-                                                <td>32</td>
-                                                <td>$39</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck4">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-5.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">David Gilmour</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">only@dummy.com</a>
-                                                </td>
-                                                <td><span class="badge bg-secondary-subtle text-secondary">Inactive</span>
-                                                </td>
-                                                <td>40</td>
-                                                <td>$170</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck5">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-6.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">Dianna Smiley</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">dummy@exemple.com</a>
-                                                </td>
-                                                <td><span class="badge bg-success-subtle text-success">Re-Order</span></td>
-                                                <td>80</td>
-                                                <td>$220</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck6">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-7.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">Adolfo Hess</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">dummy2dummay@dummy.com</a>
-                                                </td>
-                                                <td><span class="badge bg-success-subtle text-success">New</span></td>
-                                                <td>45</td>
-                                                <td>$120</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck7">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-8.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">James Ahern</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">dummy10@dummy.com</a>
-                                                </td>
-                                                <td><span class="badge bg-blue-subtle text-blue">Repeat</span></td>
-                                                <td>88</td>
-                                                <td>$580</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck8">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-9.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">Simon Young</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">totaldummy@dummy.com</a>
-                                                </td>
-                                                <td><span class="badge bg-danger-subtle text-danger">VIP</span></td>
-                                                <td>124</td>
-                                                <td>$380</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck9">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-10.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">Robert Lewis</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">Exemple@dummy.com</a>
-                                                </td>
-                                                <td><span class="badge bg-secondary-subtle text-secondary">Inactive</span>
-                                                </td>
-                                                <td>84</td>
-                                                <td>$254</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck10">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-1.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">Erik Brim</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">onlyfake@dummy.com</a>
-                                                </td>
-                                                <td><span class="badge bg-success-subtle text-success">Potential</span>
-                                                </td>
-                                                <td>62</td>
-                                                <td>$225</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck11">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-5.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">Kevin Powers</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">exemple@exe.com</a>
-                                                </td>
-                                                <td><span class="badge bg-blue-subtle text-blue">Repeat</span></td>
-                                                <td>54</td>
-                                                <td>$345</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck12">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-3.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">Wendy Keen</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">Exemple@dummy.com</a>
-                                                </td>
-                                                <td><span class="badge bg-success-subtle text-success">New</span></td>
-                                                <td>32</td>
-                                                <td>$39</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 16px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" name="check"
-                                                            id="customCheck13">
-                                                    </div>
-                                                </td>
-                                                <td class="ps-0">
-                                                    <img src="{{ asset('admin/assets/images/users/avatar-1.jpg') }}" alt=""
-                                                        class="thumb-md d-inline rounded-circle me-1">
-                                                    <p class="d-inline-block align-middle mb-0">
-                                                        <span class="font-13 fw-medium">Wendy Keen</span>
-                                                    </p>
-                                                </td>
-                                                <td><a href="#"
-                                                        class="d-inline-block align-middle mb-0 text-body">Exemple@dummy.com</a>
-                                                </td>
-                                                <td><span class="badge bg-success-subtle text-success">New</span></td>
-                                                <td>32</td>
-                                                <td>$39</td>
-                                                <td class="text-end">
-                                                    <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                    <a href="#"><i
-                                                            class="las la-trash-alt text-secondary fs-18"></i></a>
-                                                </td>
-                                            </tr>
+                                            @foreach ($user as $item)
+                                                <tr>
+                                                    <td>{{ $item->id }}</td>
+                                                    <td>{{ $item->name }}</td>
+                                                    <td>{{ $item->email }}</td>
+                                                    <td>{{ $item->location }}</td>
+                                                    <td>{{ $item->status }}</td>
+                                                    <td>{{ $item->role }}</td>
+                                                    <td class="text-end">
+                                                        <a href="#"><i
+                                                                class="las la-pen text-secondary fs-18"></i></a>
+                                                        <a href="#"><i
+                                                                class="las la-trash-alt text-secondary fs-18"></i></a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -512,7 +183,7 @@
                                         <script>
                                             document.write(new Date().getFullYear())
                                         </script>
-                                        Rizz
+                                        {{ env('APP_NAME') }}
                                         <span class="text-muted d-none d-sm-inline-block float-end">
                                             Crafted with
                                             <i class="iconoir-heart text-danger"></i>
@@ -523,10 +194,63 @@
                         </div>
                     </div>
                 </div>
-            </footer>
 
-            <!--end footer-->
+                {{-- Model --}}
+
+                <div class="modal fade bd-example-modal-lg" id="exampleModalLarge" tabindex="-1" role="dialog"
+                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6 class="modal-title m-0" id="myLargeModalLabel">Add New Branch</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div><!--end modal-header-->
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-lg-4 text-center">
+                                        <img src="assets/images/extra/card/find.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-8 align-self-center">
+                                        {{-- add form for adding branch --}}
+                                        <form action="{{ route('Admin.Add.New.Branch') }}" method="POST">
+                                            @csrf
+                                            <div class="form-group">
+                                                <div class="form-label">Branch Name</div>
+                                                <input type="text" name="branch_name" class="form-control"
+                                                    placeholder="Enter Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-label">Email</div>
+                                                <input type="text" name="branch_email" class="form-control"
+                                                    placeholder="Email for crendtials">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-label">Location</div>
+                                                <input type="text" name="location" class="form-control"
+                                                    placeholder="Location | City">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-label">Password</div>
+                                                <input type="text" name="password" class="form-control"
+                                                    placeholder="Password">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-label">Retype Password</div>
+                                                <input type="text" name="password_confirmation" class="form-control"
+                                                    placeholder="Retype Password">
+                                            </div>
+                                            <div class="mt-2">
+                                                <button class="btn btn-primary">Add</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <!-- end page content -->
     </div>
 @endsection
