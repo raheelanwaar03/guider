@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('admin/assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/img/logo/gf.png') }}">
     <link href="{{ asset('admin/assets/libs/simple-datatables/style.css') }}" rel="stylesheet" type="text/css" />
     <!-- App css -->
     <link href="{{ asset('admin/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
@@ -26,8 +26,6 @@
     <div class="topbar d-print-none">
         <div class="container-xxl">
             <nav class="topbar-custom d-flex justify-content-between" id="topbar-custom">
-
-
                 <ul class="topbar-item list-unstyled d-inline-flex align-items-center mb-0">
                     <li>
                         <button class="nav-link mobile-menu-btn nav-icon" id="togglemenu">
@@ -67,26 +65,24 @@
                                         class="thumb-md rounded-circle">
                                 </div>
                                 <div class="flex-grow-1 ms-2 text-truncate align-self-center">
-                                    <h6 class="my-0 fw-medium text-dark fs-13">William Martin</h6>
-                                    <small class="text-muted mb-0">Front End Developer</small>
+                                    <h6 class="my-0 fw-medium text-dark fs-13">Uzaib Ahmad</h6>
+                                    <small class="text-muted mb-0">CEO Of Futur Finders</small>
                                 </div><!--end media-body-->
                             </div>
                             <div class="dropdown-divider mt-0"></div>
                             <small class="text-muted px-2 pb-1 d-block">Account</small>
-                            <a class="dropdown-item" href="pages-profile.html"><i
+                            <a class="dropdown-item" href="#"><i
                                     class="las la-user fs-18 me-1 align-text-bottom"></i> Profile</a>
-                            <a class="dropdown-item" href="pages-faq.html"><i
-                                    class="las la-wallet fs-18 me-1 align-text-bottom"></i> Earning</a>
                             <small class="text-muted px-2 py-1 d-block">Settings</small>
-                            <a class="dropdown-item" href="pages-profile.html"><i
+                            <a class="dropdown-item" href="#"><i
                                     class="las la-cog fs-18 me-1 align-text-bottom"></i>Account Settings</a>
-                            <a class="dropdown-item" href="pages-profile.html"><i
-                                    class="las la-lock fs-18 me-1 align-text-bottom"></i> Security</a>
-                            <a class="dropdown-item" href="pages-faq.html"><i
-                                    class="las la-question-circle fs-18 me-1 align-text-bottom"></i> Help Center</a>
                             <div class="dropdown-divider mb-0"></div>
-                            <a class="dropdown-item text-danger" href="auth-login.html"><i
+                            <a class="dropdown-item text-danger"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
                                     class="las la-power-off fs-18 me-1 align-text-bottom"></i> Logout</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </div>
                     </li>
                 </ul><!--end topbar-nav-->
@@ -99,14 +95,14 @@
     <div class="startbar d-print-none">
         <!--start brand-->
         <div class="brand">
-            <a href="index.html" class="logo">
+            <a href="{{ route('Admin.Dashboard') }}" class="logo">
                 <span>
-                    <img src="{{ asset('admin/assets/images/logo-sm.png') }}" alt="logo-small" class="logo-sm">
+                    <img src="{{ asset('assets/img/logo/gf.png') }}" alt="logo-small" class="logo-sm">
                 </span>
                 <span class="">
-                    <img src="{{ asset('admin/assets/images/logo-light.png') }}" alt="logo-large"
+                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large"
                         class="logo-lg logo-light">
-                    <img src="{{ asset('admin/assets/images/logo-dark.png') }}" alt="logo-large"
+                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" height="50px" width="50px"
                         class="logo-lg logo-dark">
                 </span>
             </a>
@@ -130,8 +126,8 @@
                                 <i class="iconoir-home-simple menu-icon"></i>
                                 <span>Dashboards</span>
                             </a>
-                        </li><!--end nav-item-->
-                        <li class="nav-item">
+                        </li>
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="#sidebarApplications" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="sidebarApplications">
                                 <i class="iconoir-view-grid menu-icon"></i>
@@ -235,7 +231,7 @@
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarApplications-->
-                        </li><!--end nav-item-->
+                        </li>
                         <li class="menu-label mt-2">
                             <small class="label-border">
                                 <div class="border_left hidden-xs"></div>
@@ -313,7 +309,7 @@
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarElements-->
-                        </li><!--end nav-item-->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#sidebarAdvancedUI" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="sidebarAdvancedUI">
@@ -355,7 +351,7 @@
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarAdvancedUI-->
-                        </li><!--end nav-item-->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#sidebarForms" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="sidebarForms">
@@ -387,7 +383,7 @@
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarForms-->
-                        </li><!--end nav-item-->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#sidebarCharts" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="sidebarCharts">
@@ -410,7 +406,7 @@
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarCharts-->
-                        </li><!--end nav-item-->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#sidebarTables" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="sidebarTables">
@@ -430,7 +426,7 @@
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarTables-->
-                        </li><!--end nav-item-->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#sidebarIcons" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="sidebarIcons">
@@ -453,7 +449,7 @@
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarIcons-->
-                        </li><!--end nav-item-->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#sidebarMaps" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="sidebarMaps">
@@ -473,7 +469,7 @@
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarMaps-->
-                        </li><!--end nav-item-->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#sidebarEmailTemplates" data-bs-toggle="collapse"
                                 role="button" aria-expanded="false" aria-controls="sidebarEmailTemplates">
@@ -493,7 +489,7 @@
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarEmailTemplates-->
-                        </li><!--end nav-item-->
+                        </li>
                         <li class="menu-label mt-2">
                             <small class="label-border">
                                 <div class="border_left hidden-xs"></div>
@@ -538,7 +534,7 @@
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarPages-->
-                        </li><!--end nav-item-->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#sidebarAuthentication" data-bs-toggle="collapse"
                                 role="button" aria-expanded="false" aria-controls="sidebarAuthentication">
@@ -570,7 +566,7 @@
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarAuthentication-->
-                        </li><!--end nav-item-->
+                        </li> --}}
                     </ul><!--end navbar-nav--->
                 </div>
             </div><!--end startbar-collapse-->
