@@ -100,10 +100,9 @@
                     <img src="{{ asset('assets/img/logo/gf.png') }}" alt="logo-small" class="logo-sm">
                 </span>
                 <span class="">
-                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large"
-                        class="logo-lg logo-light">
-                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" height="50px" width="50px"
-                        class="logo-lg logo-dark">
+                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" class="logo-lg logo-light">
+                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" height="50px"
+                        width="50px" class="logo-lg logo-dark">
                 </span>
             </a>
         </div>
@@ -127,18 +126,17 @@
                                 <span>Dashboards</span>
                             </a>
                         </li>
-                        {{-- <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="#sidebarApplications" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="sidebarApplications">
                                 <i class="iconoir-view-grid menu-icon"></i>
-                                <span>Applications</span>
+                                <span>Branches</span>
                             </a>
                             <div class="collapse " id="sidebarApplications">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#sidebarAnalytics" data-bs-toggle="collapse"
-                                            role="button" aria-expanded="false" aria-controls="sidebarAnalytics">
-                                            <span>Analytics</span>
+                                        <a class="nav-link" href="{{ route('Admin.All.Branches') }}">
+                                            <span>All Branches</span>
                                         </a>
                                         <div class="collapse " id="sidebarAnalytics">
                                             <ul class="nav flex-column">
@@ -150,89 +148,11 @@
                                                 </li><!--end nav-item-->
                                             </ul><!--end nav-->
                                         </div>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#sidebarProjects" data-bs-toggle="collapse"
-                                            role="button" aria-expanded="false" aria-controls="sidebarProjects">
-                                            <span>Projects</span>
-                                        </a>
-                                        <div class="collapse " id="sidebarProjects">
-                                            <ul class="nav flex-column">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="projects-clients.html">Clients</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="projects-team.html">Team</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="projects-project.html">Project</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="projects-task.html">Task</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="projects-kanban-board.html">Kanban
-                                                        Board</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="projects-chat.html">Chat</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="projects-users.html">Users</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="projects-create.html">Project Create</a>
-                                                </li><!--end nav-item-->
-                                            </ul><!--end nav-->
-                                        </div>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#sidebarEcommerce" data-bs-toggle="collapse"
-                                            role="button" aria-expanded="false" aria-controls="sidebarEcommerce">
-                                            <span>Ecommerce</span>
-                                        </a>
-                                        <div class="collapse " id="sidebarEcommerce">
-                                            <ul class="nav flex-column">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="ecommerce-products.html">Products</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="ecommerce-customers.html">Customers</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link"
-                                                        href="ecommerce-customer-details.html">Customer Details</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="ecommerce-orders.html">Orders</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="ecommerce-order-details.html">Order
-                                                        Details</a>
-                                                </li><!--end nav-item-->
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="ecommerce-refunds.html">Refunds</a>
-                                                </li><!--end nav-item-->
-                                            </ul><!--end nav-->
-                                        </div>
-                                    </li><!--end nav-item-->
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="apps-chat.html">Chat</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="apps-contact-list.html">Contact List</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="apps-calendar.html">Calendar</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="apps-invoice.html">Invoice</a>
-                                    </li><!--end nav-item-->
+                                    </li>
                                 </ul><!--end nav-->
                             </div><!--end startbarApplications-->
                         </li>
-                        <li class="menu-label mt-2">
+                        {{-- <li class="menu-label mt-2">
                             <small class="label-border">
                                 <div class="border_left hidden-xs"></div>
                                 <div class="border_right"></div>

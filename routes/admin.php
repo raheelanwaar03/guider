@@ -9,5 +9,6 @@ use Illuminate\Support\Facades\Route;
 Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(function () {
     Route::get('/Dashboard', [AdminDashboardController::class, 'index'])->name('Dashboard');
     // add Branch
+    Route::get('All/Branches', [BranchController::class, 'index'])->name('All.Branches');
     Route::post('Add/New/Branch', [BranchController::class, 'add'])->name('Add.New.Branch');
 });

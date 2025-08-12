@@ -11,6 +11,13 @@ use Illuminate\Support\Facades\Hash;
 
 class BranchController extends Controller
 {
+
+    public function index()
+    {
+        $user = User::where('role', 'branch')->get();
+        return view('admin.branch.index', compact('user'));
+    }
+
     public function add(Request $request)
     {
         $request->validate([
