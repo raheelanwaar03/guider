@@ -100,7 +100,8 @@
                     <img src="{{ asset('assets/img/logo/gf.png') }}" alt="logo-small" class="logo-sm">
                 </span>
                 <span class="">
-                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" class="logo-lg logo-light">
+                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" height="50px" width="50px"
+                        class="logo-lg logo-light">
                     <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" height="50px"
                         width="50px" class="logo-lg logo-dark">
                 </span>
@@ -152,85 +153,28 @@
                                 </ul><!--end nav-->
                             </div><!--end startbarApplications-->
                         </li>
-                        {{-- <li class="menu-label mt-2">
+                        <li class="menu-label mt-2">
                             <small class="label-border">
                                 <div class="border_left hidden-xs"></div>
                                 <div class="border_right"></div>
                             </small>
-                            <span>Components</span>
+                            <span>Other</span>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#sidebarElements" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="sidebarElements">
                                 <i class="iconoir-compact-disc menu-icon"></i>
-                                <span>UI Elements</span>
+                                <span>Students</span>
                             </a>
                             <div class="collapse " id="sidebarElements">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="ui-alerts.html">Alerts</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-avatar.html">Avatar</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-buttons.html">Buttons</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-badges.html">Badges</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-cards.html">Cards</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-carousels.html">Carousels</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-dropdowns.html">Dropdowns</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-grids.html">Grids</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-images.html">Images</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-list.html">List</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-modals.html">Modals</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-navs.html">Navs</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-navbar.html">Navbar</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-paginations.html">Paginations</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-popover-tooltips.html">Popover & Tooltips</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-progress.html">Progress</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-spinners.html">Spinners</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-tabs-accordions.html">Tabs & Accordions</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-typography.html">Typography</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-videos.html">Videos</a>
+                                        <a class="nav-link" href="{{ route('Admin.All.Students') }}">All Students</a>
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarElements-->
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="#sidebarAdvancedUI" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="sidebarAdvancedUI">
                                 <i class="iconoir-peace-hand menu-icon"></i>
