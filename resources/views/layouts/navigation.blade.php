@@ -149,14 +149,21 @@
                             </ul>
                             <!-- nav-right -->
                             <div class="nav-right">
-                                {{-- <div class="search-btn">
+                                <div class="search-btn">
                                     <button type="button" class="nav-right-link search-box-outer"><i
                                             class="far fa-search"></i></button>
-                                </div> --}}
-                                <div class="nav-btn">
-                                    <a href="{{ route('login') }}" class="theme-btn">Sign In<i
-                                            class="fas fa-circle-arrow-right"></i></a>
                                 </div>
+                                @if (auth()->user())
+                                    <div class="nav-btn">
+                                        <a href="{{ route('User.Dashboard') }}" class="theme-btn">Dashboard<i
+                                                class="fas fa-circle-arrow-right"></i></a>
+                                    </div>
+                                @else
+                                    <div class="nav-btn">
+                                        <a href="{{ route('login') }}" class="theme-btn">Sign In<i
+                                                class="fas fa-circle-arrow-right"></i></a>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -174,7 +181,8 @@
         <button class="close-search"><span class="far fa-times"></span></button>
         <form action="#">
             <div class="form-group">
-                <input type="search" name="search-field" class="form-control" placeholder="Search Here..." required>
+                <input type="search" name="search-field" class="form-control" placeholder="Search Here..."
+                    required>
                 <button type="submit"><i class="far fa-search"></i></button>
             </div>
         </form>
