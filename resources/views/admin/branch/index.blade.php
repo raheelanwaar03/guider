@@ -218,12 +218,12 @@
                                             @csrf
                                             <div class="form-group">
                                                 <div class="form-label">Branch Name</div>
-                                                <input type="text" name="branch_name" class="form-control"
+                                                <input type="text" name="name" class="form-control"
                                                     placeholder="Enter Name">
                                             </div>
                                             <div class="form-group">
                                                 <div class="form-label">Email</div>
-                                                <input type="text" name="branch_email" class="form-control"
+                                                <input type="text" name="email" class="form-control"
                                                     placeholder="Email for crendtials">
                                             </div>
                                             <div class="form-group">
