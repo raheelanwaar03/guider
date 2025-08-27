@@ -5,6 +5,7 @@
     <link href="{{ asset('admin/assets/libs/huebee/huebee.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admin/assets/libs/vanillajs-datepicker/css/datepicker.min.css') }}" rel="stylesheet"
         type="text/css" />
+    <link href="{{ asset('admin/assets/libs/uppy/uppy.min.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
 @section('content')
@@ -23,7 +24,7 @@
                             </div><!--end card-header-->
                             <div class="card-body pt-0">
                                 <form action="{{ route('Branch.Store.Student') }}" class="row g-3 needs-validation"
-                                    method="POST">
+                                    enctype="multipart/form-data" method="POST">
                                     @csrf
                                     <div class="col-md-4">
                                         <label for="name" class="form-label">First name <span
@@ -75,6 +76,20 @@
                                                         id="female" value="Female">
                                                     <label class="form-check-label" for="female">Female</label>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body pt-0">
+                                            <div class="d-grid">
+                                                <p class="text-muted">Profile Picture</p>
+                                                <div
+                                                    class="preview-box d-block justify-content-center rounded  border-dashed border-theme-color overflow-hidden p-3">
+                                                </div>
+                                                <input type="file" id="input-file" name="profile_pic"
+                                                    accept="image/*" onchange={handleChange()} hidden />
+                                                <label class="btn-upload btn btn-primary mt-3" for="input-file">Upload
+                                                    Image</label>
                                             </div>
                                         </div>
                                     </div>
@@ -265,5 +280,8 @@
     <script src="{{ asset('admin/assets/js/moment.js') }}"></script>
     <script src="{{ asset('admin/assets/libs/imask/imask.min.js') }}"></script>
     <script src="{{ asset('admin/assets/js/pages/forms-advanced.js') }}"></script>
+
+    <script src="{{ asset('admin/assets/libs/uppy/uppy.legacy.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/pages/file-upload.init.js') }}"></script>
     <script src="{{ asset('admin/assets/js/app.js') }}"></script>
 @endsection

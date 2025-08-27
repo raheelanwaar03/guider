@@ -34,6 +34,8 @@ return new class extends Migration
             $table->string('grading_scheme')->nullable();
             $table->string('grading_average')->nullable();
             $table->string('rejection');
+            $table->string('profile_pic')->nullable();
+            $table->string('added_by');
             $table->timestamps();
         });
     }

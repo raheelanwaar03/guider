@@ -36,6 +36,7 @@ class clean extends Command
 
         // Add User
         $user = new User();
+        $user->user_id = 'AD123456';
         $user->name = 'Admin';
         $user->email = 'admin@gmail.com';
         $user->password = Hash::make('asdfasdf');
@@ -43,6 +44,7 @@ class clean extends Command
         $user->save();
 
         $user = new User();
+        $user->user_id = 'US123457';
         $user->name = 'User';
         $user->email = 'user@gmail.com';
         $user->password = Hash::make('asdfasdf');
@@ -50,6 +52,7 @@ class clean extends Command
         $user->save();
 
         $user = new User();
+        $user->user_id = 'BR123458';
         $user->name = 'Branch';
         $user->email = 'branch@gmail.com';
         $user->location = 'Test Location';

@@ -1,4 +1,4 @@
-@extends('admin.layout.index')
+@extends('branch.layout.app')
 
 @section('content')
     <div class="page-wrapper">
@@ -21,10 +21,12 @@
                                         <thead class="table-light">
                                             <tr>
                                                 <th>Student ID</th>
+                                                <th>Picture</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>Email</th>
                                                 <th>Passport No</th>
+                                                <th>Added By</th>
                                                 <th class="text-end">Action</th>
                                             </tr>
                                         </thead>
@@ -32,10 +34,20 @@
                                             @foreach ($students as $item)
                                                 <tr>
                                                     <td>{{ $item->student_id }}</td>
+                                                    <td>
+                                                        @if ($item->profile_pic == null)
+                                                            <p>None</p>
+                                                        @else
+                                                            <img src="{{ asset('student/' . $item->profile_pic) }}"
+                                                                style="border-radius:12px;height:50px;width:50px;"
+                                                                class="img-fluid img-responsive">
+                                                        @endif
+                                                    </td>
                                                     <td>{{ $item->fname }}</td>
                                                     <td>{{ $item->lname }}</td>
                                                     <td>{{ $item->email }}</td>
                                                     <td>{{ $item->passport_no }}</td>
+                                                    <td>{{ $item->added_by }}</td>
                                                     <td class="text-end">
                                                         <a href="{{ route('Branch.Student.Detail', $item->id) }}"
                                                             class="btn btn-sm btn-primary">Detail</a>

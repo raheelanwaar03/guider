@@ -44,6 +44,14 @@ class BranchStudentController extends Controller
         $student->grading_scheme = $request->grading_scheme;
         $student->grading_average = $request->grading_average;
         $student->rejection = $request->rejection;
+        if ($request->hasFile('profile_pic')) {
+            $picture = $request->profile_pic;
+            $profile_pic = rand(1111111, 9999999) . '.' . $picture->getClientOriginalExtension();
+            $picture->move(public_path('student/'), $profile_pic);
+            $student->profile_pic = $profile_pic;
+        }
+
+        $student->added_by = auth()->user()->user_id;
         $student->save();
         return redirect()->back()->with('success', 'Student Added Successfully');
     }
