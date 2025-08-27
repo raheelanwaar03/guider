@@ -50,6 +50,7 @@
 
                     <li class="topbar-item">
                         <a href="{{ route('Branch.Add.Student') }}" class="nav-link nav-icon" title="Add Student">
+                            <i class="icofont-plus-circle dark-mode"></i>
                             <i class="icofont-plus-circle light-mode"></i>
                         </a>
                         <a class="nav-link nav-icon" href="javascript:void(0);" id="light-dark-mode">

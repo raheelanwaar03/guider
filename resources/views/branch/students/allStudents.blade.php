@@ -20,8 +20,7 @@
                                     <table class="table mb-0 checkbox-all" id="datatable_1">
                                         <thead class="table-light">
                                             <tr>
-                                                <th>Student ID</th>
-                                                <th>Picture</th>
+                                                <th>Student</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>Email</th>
@@ -33,15 +32,17 @@
                                         <tbody>
                                             @foreach ($students as $item)
                                                 <tr>
-                                                    <td>{{ $item->student_id }}</td>
                                                     <td>
                                                         @if ($item->profile_pic == null)
-                                                            <p>None</p>
+                                                            <img src="{{ asset('admin/assets/images/users/avatar-5.jpg') }}"
+                                                                style="border-radius:12px;height:50px;width:50px;"
+                                                                class="img-fluid img-responsive">
                                                         @else
                                                             <img src="{{ asset('student/' . $item->profile_pic) }}"
                                                                 style="border-radius:12px;height:50px;width:50px;"
                                                                 class="img-fluid img-responsive">
                                                         @endif
+                                                        {{ $item->student_id }}
                                                     </td>
                                                     <td>{{ $item->fname }}</td>
                                                     <td>{{ $item->lname }}</td>
