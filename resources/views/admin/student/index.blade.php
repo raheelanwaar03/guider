@@ -15,38 +15,42 @@
                                 </div><!--end row-->
                             </div><!--end card-header-->
                             <div class="card-body pt-0">
-
                                 <div class="table-responsive">
                                     <table class="table mb-0 checkbox-all" id="datatable_1">
                                         <thead class="table-light">
                                             <tr>
-                                                <th>No</th>
-                                                <th>Name</th>
+                                                <th>Student</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
                                                 <th>Email</th>
-                                                <th>Status</th>
-                                                <th>Role</th>
+                                                <th>Passport No</th>
+                                                <th>Added By</th>
                                                 <th class="text-end">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($user as $item)
+                                            @foreach ($student as $item)
                                                 <tr>
-                                                    <td>{{ $item->id }}</td>
-                                                    <td>{{ $item->name }}</td>
-                                                    <td>{{ $item->email }}</td>
                                                     <td>
-                                                        @if ($item->status == 'active')
-                                                            <span class="badge badge-dark bg-primary">Active</span>
+                                                        @if ($item->profile_pic == null)
+                                                            <img src="{{ asset('admin/assets/images/users/avatar-5.jpg') }}"
+                                                                style="border-radius:12px;height:50px;width:50px;"
+                                                                class="img-fluid img-responsive">
                                                         @else
-                                                            <span class="badge badge-danger bg-danger">Inactive</span>
+                                                            <img src="{{ asset('student/' . $item->profile_pic) }}"
+                                                                style="border-radius:12px;height:50px;width:50px;"
+                                                                class="img-fluid img-responsive">
                                                         @endif
+                                                        {{ $item->student_id }}
                                                     </td>
-                                                    <td>{{ $item->role }}</td>
+                                                    <td>{{ $item->fname }}</td>
+                                                    <td>{{ $item->lname }}</td>
+                                                    <td>{{ $item->email }}</td>
+                                                    <td>{{ $item->passport_no }}</td>
+                                                    <td>{{ $item->added_by }}</td>
                                                     <td class="text-end">
-                                                        <a href="#"><i
-                                                                class="las la-pen text-secondary fs-18"></i></a>
-                                                        <a href="#"><i
-                                                                class="las la-trash-alt text-secondary fs-18"></i></a>
+                                                        <a href="{{ route('Admin.Student.Detail', $item->id) }}"
+                                                            class="btn btn-sm btn-primary">Detail</a>
                                                     </td>
                                                 </tr>
                                             @endforeach

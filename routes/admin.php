@@ -13,5 +13,8 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('All/Branches', [BranchController::class, 'index'])->name('All.Branches');
     Route::post('Add/New/Branch', [BranchController::class, 'add'])->name('Add.New.Branch');
     // students
+    Route::get('Add/Student', [StudentController::class, 'addStudent'])->name('Add.Student');
+    Route::post('Store/Student/Details', [StudentController::class, 'storeStudent'])->name('Store.Student.Details');
     Route::get('All/Students', [StudentController::class, 'students'])->name('All.Students');
+    Route::get('Student/Detail/{id}', [StudentController::class, 'studentDetial'])->name('Student.Detail');
 });

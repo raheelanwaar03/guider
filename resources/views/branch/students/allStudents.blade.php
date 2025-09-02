@@ -15,7 +15,6 @@
                                 </div><!--end row-->
                             </div><!--end card-header-->
                             <div class="card-body pt-0">
-
                                 <div class="table-responsive">
                                     <table class="table mb-0 checkbox-all" id="datatable_1">
                                         <thead class="table-light">

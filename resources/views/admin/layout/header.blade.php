@@ -46,6 +46,10 @@
                     </li>
 
                     <li class="topbar-item">
+                        <a href="{{ route('Admin.Add.Student') }}" class="nav-link nav-icon" title="Add Student">
+                            <i class="icofont-plus-circle dark-mode"></i>
+                            <i class="icofont-plus-circle light-mode"></i>
+                        </a>
                         <a class="nav-link nav-icon" href="javascript:void(0);" id="light-dark-mode">
                             <i class="icofont-moon dark-mode"></i>
                             <i class="icofont-sun light-mode"></i>
@@ -100,8 +104,8 @@
                     <img src="{{ asset('assets/img/logo/gf.png') }}" alt="logo-small" class="logo-sm">
                 </span>
                 <span class="">
-                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" height="50px" width="50px"
-                        class="logo-lg logo-light">
+                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" height="50px"
+                        width="50px" class="logo-lg logo-light">
                     <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" height="50px"
                         width="50px" class="logo-lg logo-dark">
                 </span>
@@ -169,6 +173,7 @@
                             <div class="collapse " id="sidebarElements">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('Admin.Add.Student') }}">Add Students</a>
                                         <a class="nav-link" href="{{ route('Admin.All.Students') }}">All Students</a>
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
