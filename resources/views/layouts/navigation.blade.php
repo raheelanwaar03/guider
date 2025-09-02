@@ -66,7 +66,7 @@
                         aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
                             <a href="index.html" class="offcanvas-brand" id="offcanvasNavbarLabel">
-                                <img src="{{ asset('assets/img/logo/logo.png') }}" alt="">
+                                <img src="{{ asset('assets/img/logo/logo.png') }}" alt="logo">
                             </a>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
                                     class="far fa-xmark"></i></button>

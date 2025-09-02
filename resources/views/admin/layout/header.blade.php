@@ -104,8 +104,8 @@
                     <img src="{{ asset('assets/img/logo/gf.png') }}" alt="logo-small" class="logo-sm">
                 </span>
                 <span class="">
-                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" height="50px"
-                        width="50px" class="logo-lg logo-light">
+                    <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" height="51px"
+                        width="51px" class="logo-lg logo-light">
                     <img src="{{ asset('assets/img/logo/Gui.png') }}" alt="logo-large" height="50px"
                         width="50px" class="logo-lg logo-dark">
                 </span>
